@@ -1,0 +1,7 @@
+{
+    "diagnostics.globals": [
+        "diff_files",
+        "diff_Node",
+        "diff_Name"
+    ]
+}

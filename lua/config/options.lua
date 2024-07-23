@@ -3,6 +3,9 @@
 -- Add any additional options here
 
 LazyVim.terminal.setup("nu")
+vim.opt.shellcmdflag = "-c"
+vim.opt.shellquote = ""
+vim.opt.shellxquote = ""
 
 vim.opt.relativenumber = false
 vim.opt.shiftwidth = 4
