@@ -35,14 +35,14 @@ return {
                 end, { "n", "i", "s" }),
             })
 
-            opts.completion = vim.tbl_extend("force", opts.completion, {
-                keyword_length = 1,
-                keyword_pattern = ".*",
-            })
-
-            opts.sources = vim.tbl_extend("force", opts.sources, {
-                { name = "nvim_lsp", keyword_length = 1 },
-            })
+            -- opts.completion = vim.tbl_extend("force", opts.completion, {
+            --     keyword_length = 1,
+            -- keyword_pattern = ".*",
+            -- })
+            --
+            -- opts.sources = vim.tbl_extend("force", opts.sources, {
+            --     { name = "nvim_lsp", keyword_length = 1 },
+            -- })
         end,
     },
 }
