@@ -26,6 +26,22 @@ return {
                         fallback()
                     end
                 end, { "i", "s" }),
+                ["<C-l>"] = cmp.mapping(function()
+                    if vim.snippet.active({ direction = 1 }) then
+                        vim.schedule(function()
+                            vim.snippet.jump(1)
+                        end)
+                    end
+                end, { "n", "i", "s" }),
+            })
+
+            opts.completion = vim.tbl_extend("force", opts.completion, {
+                keyword_length = 1,
+                keyword_pattern = ".*",
+            })
+
+            opts.sources = vim.tbl_extend("force", opts.sources, {
+                { name = "nvim_lsp", keyword_length = 1 },
             })
         end,
     },
